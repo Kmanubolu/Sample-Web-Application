@@ -1,0 +1,25 @@
+string strBrowser = "IE";
+            IWebDriver _driver = null;
+
+            if (strBrowser.ToUpper() == "FIREFOX")
+            {
+                FirefoxProfile profile = new FirefoxProfile();
+                _driver = new FirefoxDriver(profile);
+            }
+            else if (strBrowser.ToUpper() == "CHROME")
+            {
+                _driver = new ChromeDriver(@"D:\Selenium\Libs");
+                //_driver = new ChromeDriver(@"D:\Selenium\SampleScripts\Selenium\packages\Selenium.WebDriver.ChromeDriver.2.10.0.0\content\chromedriver.exe");
+            }
+            else if (strBrowser.ToUpper() == "IE")
+            {
+                _driver = new InternetExplorerDriver(@"D:\Selenium\Libs");
+            }
+            
+            _driver.Manage().Window.Maximize();
+            _driver.Manage().Timeouts().ImplicitlyWait(new TimeSpan(0, 1, 0)); // setting default sync time and it impacts every line of code in the script
+
+            _driver.Navigate().GoToUrl("file:///D:/Selenium/SampleScripts/MyApp.html");
+            _driver.FindElement(Objects.edtFirstName).SendKeys("Krishna");
+            _driver.FindElement(Objects.edtLastName).SendKeys("Reddy");
+            //_driver.Close();

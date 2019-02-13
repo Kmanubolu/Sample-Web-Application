@@ -1,0 +1,36 @@
+<html>
+<title>
+</title>
+<script language="javascript" type="text/javascript">
+
+var newwindow;
+function popstatic(url)
+{
+	newwindow = window.open(url,'name','height=400,width=200');
+	if(window.focus){newwindow.focus()}
+}
+
+
+
+</script>
+<body>
+<Table width="50%"  border=1>
+<tr><td width="100%" Align=Center>Employee More Information</td></tr>
+</Table>
+
+
+<Table width="50%"  border=1>
+<tr><td width="50%" Align=Right>First Name :</td><td width="50%"><input type="text" value="" name="First Name"></td></tr>
+<tr><td width="50%" Align=Right>Department :</td><td width="50%"><select multiple name="mydropdown">
+<option value="Default">Default</option>
+<option value="Testing">Testing</option>
+<option value="Development">Development</option>
+<option value="Business Analyst">Business Analyst</option>
+</select></td></tr>
+<tr><td width="50%" Align=Right>Click Here to Quick View in Popup</td><td width="50%"><a href="javascript:popstatic('PopupWindow.htm');">Pop It</a></td></tr>
+
+
+</Table>
+
+</body>
+</html>

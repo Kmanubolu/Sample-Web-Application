@@ -1,0 +1,64 @@
+<html>
+<title>
+</title>
+
+<script language="javascript" type="text/javascript">
+
+function myfunction1()
+{
+	alert("I am an alert box!");
+}
+
+
+</script>
+
+<script language="javascript" type="text/javascript">
+function myfunction2()
+{
+	var x;
+	
+	if(confirm("Press a Button!") == true)
+	{
+		x = "You pressed OK!";
+	}
+	else
+	{
+		x = "You pressed Cancel!";
+	}
+	document.getElementById("demo1").innerHTML = x;
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+function myfunction3()
+{
+	var person = prompt("Please enter your name","Krishna");
+	
+	if(person != null)
+	{
+		document.getElementById("demo2").innerHTML = "Hello " + person + "!How are you today?";
+	}
+}
+</script>
+
+<body>
+<Table width="50%"  border=1>
+<tr><td width="100%" Align=Center>Employee More Information</td></tr>
+</Table>
+
+
+<Table width="50%"  border=1>
+
+
+<tr><td width="50%" Align=Right>Click Here to Display Alert Box</td><td width="50%"><button onclick="myfunction1()">Try It</button></td></tr>
+
+<tr><td width="50%" Align=Right>Click Here to Displau Confirm Box</td><td width="50%"><button onclick = "myfunction2()">Try It</button><p id="demo1"></p></td></tr>
+
+<tr><td width="50%" Align=Right>Click Here to Displau Prompt Box</td><td width="50%"><button onclick = "myfunction3()">Try It</button><p id="demo2"></p></td></tr>
+
+<tr><td width="50%" Align=Right>Download File</td><td width="50%"><a href="Script.rar">Try It</a></td></tr>
+
+</Table>
+
+</body>
+</html>
